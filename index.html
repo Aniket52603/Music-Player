@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPersonal Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="player-section">
+            <img src="https://via.placeholder.com/200" alt="Album Art" class="album-art" id="albumArt">
+            
+            <div class="song-info">
+                <div class="song-title" id="songTitle">Select a Song</div>
+                <div class="artist-name" id="artistName">No Artist</div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="time-info">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn small" id="prevBtn">⏮</button>
+                <button class="control-btn large" id="playBtn">▶</button>
+                <button class="control-btn small" id="nextBtn">⏭</button>
+            </div>
+            
+            <div class="volume-container">
+                <span>🔊</span>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+                <span id="volumePercent">70%</span>
+            </div>
+            
+            <div class="extra-controls">
+                <button class="extra-btn" id="shuffleBtn">🔀 Shuffle</button>
+                <button class="extra-btn" id="repeatBtn">🔁 Repeat</button>
+            </div>
+        </div>
+        
+        <div class="playlist-section">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="playlist">Playlist</button>
+                <button class="tab-btn" data-tab="recent">Recently Played</button>
+                <button class="tab-btn" data-tab="favorites">Favorites</button>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search for songs...">
+                <button class="voice-search-btn" id="voiceSearchBtn">🎤</button>
+            </div>
+            
+            <div class="tab-content active" id="playlist">
+                <ul class="song-list" id="playlistSongs"></ul>
+            </div>
+            
+            <div class="tab-content" id="recent">
+                <ul class="song-list" id="recentSongs"></ul>
+            </div>
+            
+            <div class="tab-content" id="favorites">
+                <ul class="song-list" id="favoriteSongs"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="visitor-counter">
+        Visitors: <span id="visitorCount">0</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
